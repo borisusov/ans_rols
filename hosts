@@ -1,0 +1,9 @@
+[stage_servers]
+jenkins   ansible_host=192.168.33.14
+gitlab    ansible_host=192.168.33.12
+
+[prod_servers]
+tomcat   ansible_host=192.168.33.13
+
+[dev_servers]
+artifactory    ansible_host=192.168.33.11

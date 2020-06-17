@@ -1,0 +1,3 @@
+---
+# defaults file for web_service
+destin_file: /var/www/html

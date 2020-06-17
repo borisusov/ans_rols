@@ -1,0 +1,12 @@
+---
+
+- name: install openjdk-8-jdk
+  yum: name=java-1.8.0-openjdk-devel state=latest
+  when: ansible_os_family == "RedHat"
+
+
+- name: install openjdk-8-jdk
+  apt: name=openjdk-8-jdk state=latest
+  when: ansible_os_family == "Debian"
+
+

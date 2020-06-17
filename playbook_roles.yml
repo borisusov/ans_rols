@@ -1,0 +1,14 @@
+---
+- name: Use loop in the provisioning Instances 
+  hosts: tomcat,jenkins, gitlab 
+  become: yes
+
+ 
+ 
+  roles:
+    - base
+    - web-service     
+    - selinux
+    - java
+    - info  
+
