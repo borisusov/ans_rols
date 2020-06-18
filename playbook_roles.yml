@@ -1,6 +1,6 @@
 ---
-- name: Use loop in the provisioning Instances 
-  hosts: tomcat,jenkins, gitlab 
+- name: Provisioning Instances 
+  hosts: tomcat,jenkins,gitlab,artifactory 
   become: yes
 
  
