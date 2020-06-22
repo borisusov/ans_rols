@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
   
     end
     config.vm.provision :ansible do |ansible|
-      ansible.playbook = "playbook_roles.yml"
+      ansible.playbook = "playbook.yml"
     end
 
   end
