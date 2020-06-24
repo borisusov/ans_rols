@@ -1,4 +1,6 @@
 ---
 - name: disable selinux
   shell: "sed -i s/SELINUX=enforcing/SELINUX=disabled/g /etc/selinux/config"
-
+  #  when:
+  #  path: /etc/selinux/config
+  #  replace: SELINUX=enforcing SELINUX=disabled
