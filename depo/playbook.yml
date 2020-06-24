@@ -1,0 +1,22 @@
+---
+- name: Install default programs
+  hosts: tomcat,jenkins 
+  become: yes
+
+
+  tasks:
+    - name: install epel-release
+      yum: name=epel-release state=present
+    - name: "install"
+      yum:
+        name:  "{{ item }}"
+        state: present
+      with_items:
+        - mc
+        - vim
+        - htop
+        - bind-utils
+        - net-tools
+      
+    
+    

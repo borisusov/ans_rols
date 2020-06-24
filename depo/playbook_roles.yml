@@ -1,0 +1,14 @@
+---
+- name: Provisioning Instances 
+  hosts: tomcat,jenkins,gitlab,artifactory 
+  become: yes
+
+ 
+ 
+  roles:
+    - base
+    - web-service     
+    - selinux
+    - java
+    - info  
+

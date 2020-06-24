@@ -1,0 +1,13 @@
+---
+- name: Create folder tomcat
+  file:
+    path: /home/tomcat/folder1
+    state: directory
+    mode: 0755
+
+- name: Create folder jenkins
+  file:
+    path: /home/jenkins/folder2
+    state: directory
+    mode: 0755
+

@@ -1,0 +1,78 @@
+---
+- name: Catch Instances Variables
+  hosts: tomcat,jenkins 
+  become: yes
+
+  vars:
+    message1: Privet
+    message2: World
+    secret: 423462
+    owner: Trump
+
+
+
+
+
+
+  tasks:
+    - name: Print secret variable
+      debug:
+        var: secret
+# напечатает что внутри secret
+    - name: print secret with message
+      debug:
+        msg: "Secretnyj parol: {{ secret }}"     
+      
+    - name: Print all variables
+      debug: 
+        var: message1, message2, secret
+
+    - name: print all var with message
+      debug:
+        msg: "All playbook vars: {{ message1, message2, secret }}"
+
+    - name: print add value of host file
+      debug: 
+        msg: "Owner of servers is: {{ owner }}"
+
+    - set_fact: full_message= "{{ message1 }} {{ message2 }} from {{ owner}}"
+
+    - debug:
+        var: full_message
+
+    - debug:
+        var: ansible_user_shell, ansible_os_family, ansible_node_name
+
+    - debug:
+        var: ansible_python
+
+    - debug:
+        var: ansible_mount
+
+    - debug:
+        var: ansible_memory_mb
+
+    - debug:
+        var: ansible_eth1
+
+    - debug:
+        var: ansible_virtualization_role
+
+    - debug:
+        var: ansible_selinux_python_presente
+
+    - debug:
+        var: ansible_dns
+
+    - debug:
+        var: ansible_kernel
+
+    - shell: uptime
+      register: results
+
+    - debug:
+#        var: results
+         var: results.stdout            
+
+
+
