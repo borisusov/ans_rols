@@ -1,12 +1,27 @@
 ---
 
+
 - name: install openjdk-8-jdk
   yum: name=java-1.8.0-openjdk-devel state=latest
-  when: ansible_os_family == "RedHat"
 
 
-- name: install openjdk-8-jdk
-  apt: name=openjdk-8-jdk state=latest
-  when: ansible_os_family == "Debian"
+- name: Set JAVA_HOME
+  lineinfile:
+    dest: /etc/environment
+    state: present
+    regexp: '^JAVA_HOME'
+    line: 'JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk'
+
+
+  
+- name: install openjdk-11-jdk
+  yum: name=java-11-openjdk-devel state=latest
+
+  #- name: Set JAVA_HOME
+  #  lineinfile:
+  #  dest: /etc/environment
+  #  state: present
+  #  regexp: '^JAVA_HOME'
+  #  line: 'JAVA_HOME=/usr/lib/jvm/java-11-openjdk'
 
 

@@ -4,6 +4,6 @@
   service: name=httpd state=restarted
   when: ansible_os_family == "RedHat"
 
-- name: Restart_Apache_Ubuntu
-  service: name=apache2 state=restarted
-  when: ansible_os_family == "Debian"
+#- name: Restart_Apache_Ubuntu
+#  service: name=apache2 state=restarted
+#  when: ansible_os_family == "Debian"

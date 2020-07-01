@@ -1,34 +1,11 @@
+---
 
- - name: "install"
-      yum:
-        name:  "{{ item }}"
-        state: present
-      with_items:
-        - mc
-        - vim
-        - htop
-        - bind-utils
-        - net-tools
-
-- name: install mc
-  yum: name=mc state=present
-  when: ansible_os_family == "RedHat"
-
-- name: install htop
-  yum: name=htop state=present
-  when: ansible_os_family == "RedHat"
-
-
-- name: install vim
-  yum: name=vim state=present
-  when: ansible_os_family == "RedHat"
-
-
-- name: install bind-utils
-  yum: name=bind-utils state=present
-  when: ansible_os_family == "RedHat"
-
-- name: install net-tools
-  yum: name=net-tools state=present
-  when: ansible_os_family == "RedHat"
+- name: Install packages for RedHat
+  yum: name={{ item }} state=latest
+  with_items:
+      - mc
+      - vim
+      - htop
+      - bind-utils
+      - net-tools
 
