@@ -1,9 +1,6 @@
 ---
-
-
 - name: install openjdk-8-jdk
   yum: name=java-1.8.0-openjdk-devel state=latest
-
 
 - name: Set JAVA_HOME
   lineinfile:

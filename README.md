@@ -43,7 +43,8 @@ java – устанавливает java 1.8.x JDK и java 11
 
 по дефолту устанавливается переменная JAVA_HOME = JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
 
-при запуске playbook.yml c ключом -extra-vars 11  устанавливается переменная JAVA_HOME = JAVA_HOME=/usr/lib/jvm/java-11-openjdk
+при запуске playbook  c ключом  ansible-playbook playbook.yml --extra-var "java=11"
+устанавливается переменная JAVA_HOME = JAVA_HOME=/usr/lib/jvm/java-11-openjdk
 
 selinux -  в этой роли Ansible отключает selinux
 
