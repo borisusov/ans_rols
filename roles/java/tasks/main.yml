@@ -10,7 +10,8 @@
     dest: /etc/environment
     state: present
     regexp: '^JAVA_HOME'
-    line: 'JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk'
+    line: 'JAVA_HOME=/usr/lib/jvm/java-"{{ java }}"-openjdk'
+#    line: 'JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk'
 
 
   
