@@ -1,9 +1,19 @@
 [stage_servers]
 jenkins   ansible_host=192.168.33.14
+#owner=Obama
+#location=New_Orlean
+ 
 gitlab    ansible_host=192.168.33.12
+#owner=Ford
+#location=Detroit
 
 [prod_servers]
 tomcat   ansible_host=192.168.33.13
+#owner=Trump
+#location=Washington
 
 [dev_servers]
 artifactory    ansible_host=192.168.33.11
+#owner=Reagan
+#location=New-York
+

@@ -1,0 +1,11 @@
+---
+
+- name: Install packages for RedHat
+  yum: name={{ item }} state=latest
+  with_items:
+      - mc
+      - vim
+      - htop
+      - bind-utils
+      - net-tools
+
