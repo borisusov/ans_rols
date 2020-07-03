@@ -1,6 +1,6 @@
 ---
 - name: Provisioning Instances 
-  hosts: tomcat 
+  hosts: all 
   become: yes
   vars:
     java: 1.8.0      
@@ -8,6 +8,6 @@
  
   roles:
     - base
-#    - web-service     
+    - web-service     
     - java
 
