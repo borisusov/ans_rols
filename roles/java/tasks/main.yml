@@ -1,6 +1,9 @@
 ---
-- name: install openjdk-8-jdk
-  yum: name=java-1.8.0-openjdk-devel state=latest
+- name: install pre-defined java version
+
+  yum: name=java-{{ java }}-openjdk-devel state=present
+
+#  yum: name=java-1.8.0-openjdk-devel state=latest
 
 - name: Set JAVA_HOME
   lineinfile:
@@ -12,8 +15,8 @@
 
 
   
-- name: install openjdk-11-jdk
-  yum: name=java-11-openjdk-devel state=latest
+#- name: install openjdk-11-jdk
+#  yum: name=java-11-openjdk-devel state=latest
 
   #- name: Set JAVA_HOME
   #  lineinfile:

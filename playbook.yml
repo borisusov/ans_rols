@@ -1,10 +1,11 @@
 ---
 - name: Provisioning Instances 
-  hosts: all 
+  hosts: tomcat 
   become: yes
   vars:
-    java: 1.8.0      
- 
+    java: 1.8.0
+    extra_repository: epel-release
+#    utils_inst: mc
  
   roles:
     - base

@@ -2,7 +2,7 @@
 
 - name: Install packages for RedHat
   yum: name={{ item }} state=latest
-  with_items:
+  with_items: #name={{ utils_inst }}
       - mc
       - vim
       - htop
