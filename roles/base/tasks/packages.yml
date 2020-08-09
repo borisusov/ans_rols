@@ -16,4 +16,3 @@
     name: "{{ package_list }}"
     state: present
 
-

@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
   config.ssh.insert_key = false
   config.vm.provider :virtualbox do |v|
 #    v.gui = true
-    v.memory = 1024
+    v.memory = 2048
 #    v.linked_clone = true
   end
 
@@ -31,9 +31,10 @@ Vagrant.configure("2") do |config|
     app.vm.hostname = "Jenkins"
     app.vm.network :private_network, ip: "192.168.33.14"
     config.vm.provider :virtualbox do |appv|
-      appv.memory = 1024
+      appv.memory = 2048
       appv.cpus = 1
      config.disksize.size = '50GB'
+#    config.vm.synced_folder "/var/jenkins_home1", "/var/jenkins_home1"
     end
   end
 

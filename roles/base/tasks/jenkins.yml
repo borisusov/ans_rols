@@ -1,5 +1,0 @@
----
-
-- name: Install packages for RedHat
-  yum: name=jenkins state=latest
-  ignore_errors: yes
