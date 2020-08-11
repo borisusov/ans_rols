@@ -1,0 +1,12 @@
+
+yum install -y docker
+systemctl status docker
+systemctl start docker
+
+docker pull jenkins
+
+mkdir /var/lib/jenkins
+chown jenkins:jenkins /var/lib/jenkins 
+
+usermod -a -G docker:vagrant
+
