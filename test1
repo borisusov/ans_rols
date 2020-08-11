@@ -4,7 +4,7 @@ systemctl status docker
 systemctl start docker
 
 docker pull jenkins
-
+#docker pull jenkins
 mkdir /var/lib/jenkins
 chown jenkins:jenkins /var/lib/jenkins 
 
