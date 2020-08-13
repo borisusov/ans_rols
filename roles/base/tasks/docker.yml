@@ -4,4 +4,10 @@
   yum: name=docker state=latest
 
 - name: Start Docker
-  service: name=docker  state=started  
+  service: name=docker  state=started
+
+- name: Docker pull jenkins
+  shell: docker pull jenkins
+
+- name: Docker run and expose ports
+  shell: docker run -p 8080:8080 -v /home/usov/solutions/ans_rols/jenkins_home1:/var/jenkins_home jenkins  
