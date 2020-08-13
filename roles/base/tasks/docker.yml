@@ -3,3 +3,5 @@
 - name: Install packages for RedHat
   yum: name=docker state=latest
 
+- name: Start Docker
+  service: name=docker  state=started  

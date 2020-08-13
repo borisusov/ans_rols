@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
     config.vm.provider :virtualbox do |appv|
       appv.memory = 1024
       appv.cpus = 1
-      config.disksize.size = '50GB'
+#      config.disksize.size = '50GB'
   
     end
     config.vm.provision :ansible do |ansible|
@@ -34,7 +34,7 @@ Vagrant.configure("2") do |config|
       appv.memory = 2048
       appv.cpus = 1
      config.disksize.size = '50GB'
-#    config.vm.synced_folder "/var/jenkins_home1", "/var/jenkins_home1"
+#     config.vm.synced_folder "/var/jenkins_home1", "/var/jenkins_home1"
     end
   end
 
@@ -42,7 +42,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "gitlab" do |app|
     app.vm.box =  "centos/7"
     app.vm.hostname = "GitLab"
-    config.disksize.size = '50GB'
+#    config.disksize.size = '50GB'
     app.vm.network :private_network, ip: "192.168.33.12"
   end
 
@@ -53,7 +53,7 @@ Vagrant.configure("2") do |config|
     config.vm.provider :virtualbox do |appv|
       appv.memory = 1024
       appv.cpus = 1
-      config.disksize.size = '50GB'
+#      config.disksize.size = '50GB'
     end
   end
 
