@@ -12,4 +12,4 @@
     source: pull 
 
 - name: Docker run and expose ports
-  shell: docker run -p 8080:8080 -v /home/usov/solutions/ans_rols/jenkins_external:/var/jenkins_home jenkins  
+  shell: docker run -p 8080:8080 -v /var/jenkins_external:/var/jenkins_home jenkins  
