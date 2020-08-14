@@ -8,6 +8,6 @@
  
   roles:
     - base
-#    - web-service     
+    - web-service     
     - java
 

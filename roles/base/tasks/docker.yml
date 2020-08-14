@@ -6,8 +6,10 @@
 - name: Start Docker
   service: name=docker  state=started
 
-- name: Docker pull jenkins
-  shell: docker pull jenkins
+- name: Docker pull an image
+  docker_image:
+    name: jenkis
+    source: pull 
 
 - name: Docker run and expose ports
-  shell: docker run -p 8080:8080 -v /home/usov/solutions/ans_rols/jenkins_home1:/var/jenkins_home jenkins  
+  shell: docker run -p 8080:8080 -v /home/usov/solutions/ans_rols/jenkins_external:/var/jenkins_home jenkins  
