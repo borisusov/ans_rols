@@ -1,5 +1,6 @@
 ---
 package_list:
+  - python
   - zip
   - unzip
   - mc
@@ -8,9 +9,10 @@ package_list:
   - bind-utils
   - net-tools
   - wget
-        
+
+
 vars:
-  java_current: 1.8.0
+  java_current: "1.8.0"
   extra_repository: epel-release
 
 
