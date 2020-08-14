@@ -1,2 +1,18 @@
 ---
-# vars file for base
+package_list:
+  - python
+  - zip
+  - unzip
+  - mc
+  - vim
+  - htop
+  - bind-utils
+  - net-tools
+  - wget
+
+
+vars:
+  java_current: "1.8.0"
+  extra_repository: epel-release
+
+

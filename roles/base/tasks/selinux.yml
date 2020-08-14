@@ -1,5 +1,4 @@
-- name: Disable SELinux
+- name: Put SELinux in permissive mode
   selinux:
-    state: disabled
-
-
+    policy: targeted
+    state: permissive

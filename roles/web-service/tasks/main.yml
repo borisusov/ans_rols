@@ -28,4 +28,4 @@
   template: src=index.html.j2 dest={{ destin_folder }}/index.html mode=0644
   notify:
     - Restart_Apache_RedHat
-#    - Restart_Apache_Debian  
+    - Restart_Apache_Debian  

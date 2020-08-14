@@ -1,3 +1,4 @@
-- name: install epel-release
-  yum: name=epel-release state=present
+- name: install extra-repository
+  yum: name={{ extra_repository }} state=present
+#  yum: name=epel-release state=present
   when: ansible_os_family == "RedHat"

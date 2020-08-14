@@ -1,11 +1,18 @@
 ---
 
-- name: Install packages for RedHat
-  yum: name={{ item }} state=latest
-  with_items:
-      - mc
-      - vim
-      - htop
-      - bind-utils
-      - net-tools
+#- name: Install packages for RedHat
+#  yum: name={{ item }} state=latest
+#  with_items: #name={{ utils_inst }}
+#      - mc
+#      - vim
+#      - htop
+#      - bind-utils
+#      - net-tools
+#      - wget
+
+
+- name: Install Common Packages
+  package:
+    name: "{{ package_list }}"
+    state: present
 

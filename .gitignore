@@ -3,6 +3,7 @@
 Vagrant
 .git/
 insecure_private_key
+secret.key
 *.tfstate*
 .terraform/*
 *.bak
