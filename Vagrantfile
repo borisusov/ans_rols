@@ -67,10 +67,5 @@ Vagrant.configure("2") do |config|
      config.disksize.size = '50GB'
     end
   end
-
-
-
-
-
 end
 
