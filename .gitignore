@@ -13,6 +13,7 @@ tmp/*
 *.swp
 *.log
 *.swo
+*.tar.gz
 goldtemplate
 usov-vagrant-key
 

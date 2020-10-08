@@ -1,5 +1,6 @@
 [stage_servers]
 jenkins   ansible_host=192.168.33.14
+jfrog     ansible_host=192.168.33.9
 #owner=Obama
 #location=New_Orlean
  
