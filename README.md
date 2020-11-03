@@ -63,3 +63,7 @@ docker run -d -p 8080:8080 -p 50000:50000 -v /jenkins_external:/var/jenkins_home
 ```
 
 
+-------------------------------------------------------------------------------------------------------
+0. Jenkins application version tag -> push  into git
+1. Jenkins - install and configure plagins to discover and build all pull requests
+1.2 Checkout - build - unit-test - report -> feedbak from jenkins to github 
