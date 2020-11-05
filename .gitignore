@@ -15,5 +15,5 @@ tmp/*
 *.swo
 goldtemplate
 usov-vagrant-key
-
+*.tar.gz
 
