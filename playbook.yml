@@ -1,6 +1,6 @@
 ---
 - name: Provisioning Instances 
-  hosts: jenkins 
+  hosts: jfrog 
   become: yes
   vars:
     java: 1.8.0
@@ -8,6 +8,7 @@
  
   roles:
     - base
-    - web-service     
-    - java
+#    - docker  
+#    - web-service     
+#    - java
 
